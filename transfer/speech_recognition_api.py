@@ -28,7 +28,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 模型路径（根据实际的存储地址修改）
-base_model_path = r"./model"
+base_model_path = r"./model"#⚠️⚠️⚠️⚠️此处需要提前下载vosk模型并替换路径
 vosk_model_path = os.path.join(base_model_path, "vosk-model-cn-kaldi-multicn-0.15")
 
 # 全局识别器（单例模式）

@@ -12,11 +12,11 @@ from collections import deque
 app = Flask(__name__)
 
 # 加载模型
-#blind_model = YOLO('lumos.pt')  # ⚠️⚠️⚠️此处替换所需要的盲道模型
+blind_model = YOLO('lumos.pt')  # ⚠️⚠️⚠️此处替换所需要的盲道模型
 obstacle_model = YOLO('yolo11n.pt')  # 障碍物模型
 
 # 将模型移动到相应设备
-#blind_model.to("mps")
+blind_model.to("mps")
 obstacle_model.to("mps")
 
 # 盲道参数

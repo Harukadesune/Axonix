@@ -7,8 +7,8 @@ import requests
 
 # 百度翻译API配置
 #请自行前往百度API开发平台申请API替换下面的占位符❗❗❗❗❗❗❗❗❗❗
-BAIDU_APP_ID = "⚠⚠⚠⚠⚠⚠"
-BAIDU_API_KEY = "⚠⚠⚠⚠⚠⚠"
+BAIDU_APP_ID = "⚠️⚠️⚠️⚠️⚠️⚠️️"
+BAIDU_API_KEY = "⚠️⚠️⚠️⚠️⚠️⚠️"
 BAIDU_API_URL = "https://fanyi-api.baidu.com/api/trans/vip/translate"
 
 # 支持的语言代码列表
