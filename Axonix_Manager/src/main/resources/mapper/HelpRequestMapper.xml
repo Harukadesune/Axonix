@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Axonix.demo.mapper.HelpRequestMapper">
+  <resultMap id="BaseResultMap" type="com.Axonix.demo.model.HelpRequest">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="requester_id" jdbcType="INTEGER" property="requesterId" />
+    <result column="helper_id" jdbcType="INTEGER" property="helperId" />
+    <result column="requester_lng" jdbcType="DECIMAL" property="requesterLng" />
+    <result column="requester_lat" jdbcType="DECIMAL" property="requesterLat" />
+    <result column="helper_lng" jdbcType="DECIMAL" property="helperLng" />
+    <result column="helper_lat" jdbcType="DECIMAL" property="helperLat" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, requester_id, helper_id, requester_lng, requester_lat, helper_lng, helper_lat, 
+    status, created_at, updated_at
+  </sql>
+  <select id="selectByExample" parameterType="com.Axonix.demo.model.HelpRequestExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from help_request
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from help_request
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from help_request
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.Axonix.demo.model.HelpRequestExample">
+    delete from help_request
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.Axonix.demo.model.HelpRequest">
+    insert into help_request (id, requester_id, helper_id, 
+      requester_lng, requester_lat, helper_lng, 
+      helper_lat, status, created_at, 
+      updated_at)
+    values (#{id,jdbcType=INTEGER}, #{requesterId,jdbcType=INTEGER}, #{helperId,jdbcType=INTEGER}, 
+      #{requesterLng,jdbcType=DECIMAL}, #{requesterLat,jdbcType=DECIMAL}, #{helperLng,jdbcType=DECIMAL}, 
+      #{helperLat,jdbcType=DECIMAL}, #{status,jdbcType=INTEGER}, #{createdAt,jdbcType=TIMESTAMP}, 
+      #{updatedAt,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.Axonix.demo.model.HelpRequest">
+    insert into help_request
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="requesterId != null">
+        requester_id,
+      </if>
+      <if test="helperId != null">
+        helper_id,
+      </if>
+      <if test="requesterLng != null">
+        requester_lng,
+      </if>
+      <if test="requesterLat != null">
+        requester_lat,
+      </if>
+      <if test="helperLng != null">
+        helper_lng,
+      </if>
+      <if test="helperLat != null">
+        helper_lat,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createdAt != null">
+        created_at,
+      </if>
+      <if test="updatedAt != null">
+        updated_at,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="requesterId != null">
+        #{requesterId,jdbcType=INTEGER},
+      </if>
+      <if test="helperId != null">
+        #{helperId,jdbcType=INTEGER},
+      </if>
+      <if test="requesterLng != null">
+        #{requesterLng,jdbcType=DECIMAL},
+      </if>
+      <if test="requesterLat != null">
+        #{requesterLat,jdbcType=DECIMAL},
+      </if>
+      <if test="helperLng != null">
+        #{helperLng,jdbcType=DECIMAL},
+      </if>
+      <if test="helperLat != null">
+        #{helperLat,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createdAt != null">
+        #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedAt != null">
+        #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.Axonix.demo.model.HelpRequestExample" resultType="java.lang.Long">
+    select count(*) from help_request
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update help_request
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.requesterId != null">
+        requester_id = #{record.requesterId,jdbcType=INTEGER},
+      </if>
+      <if test="record.helperId != null">
+        helper_id = #{record.helperId,jdbcType=INTEGER},
+      </if>
+      <if test="record.requesterLng != null">
+        requester_lng = #{record.requesterLng,jdbcType=DECIMAL},
+      </if>
+      <if test="record.requesterLat != null">
+        requester_lat = #{record.requesterLat,jdbcType=DECIMAL},
+      </if>
+      <if test="record.helperLng != null">
+        helper_lng = #{record.helperLng,jdbcType=DECIMAL},
+      </if>
+      <if test="record.helperLat != null">
+        helper_lat = #{record.helperLat,jdbcType=DECIMAL},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.createdAt != null">
+        created_at = #{record.createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updatedAt != null">
+        updated_at = #{record.updatedAt,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update help_request
+    set id = #{record.id,jdbcType=INTEGER},
+      requester_id = #{record.requesterId,jdbcType=INTEGER},
+      helper_id = #{record.helperId,jdbcType=INTEGER},
+      requester_lng = #{record.requesterLng,jdbcType=DECIMAL},
+      requester_lat = #{record.requesterLat,jdbcType=DECIMAL},
+      helper_lng = #{record.helperLng,jdbcType=DECIMAL},
+      helper_lat = #{record.helperLat,jdbcType=DECIMAL},
+      status = #{record.status,jdbcType=INTEGER},
+      created_at = #{record.createdAt,jdbcType=TIMESTAMP},
+      updated_at = #{record.updatedAt,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.Axonix.demo.model.HelpRequest">
+    update help_request
+    <set>
+      <if test="requesterId != null">
+        requester_id = #{requesterId,jdbcType=INTEGER},
+      </if>
+      <if test="helperId != null">
+        helper_id = #{helperId,jdbcType=INTEGER},
+      </if>
+      <if test="requesterLng != null">
+        requester_lng = #{requesterLng,jdbcType=DECIMAL},
+      </if>
+      <if test="requesterLat != null">
+        requester_lat = #{requesterLat,jdbcType=DECIMAL},
+      </if>
+      <if test="helperLng != null">
+        helper_lng = #{helperLng,jdbcType=DECIMAL},
+      </if>
+      <if test="helperLat != null">
+        helper_lat = #{helperLat,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedAt != null">
+        updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.Axonix.demo.model.HelpRequest">
+    update help_request
+    set requester_id = #{requesterId,jdbcType=INTEGER},
+      helper_id = #{helperId,jdbcType=INTEGER},
+      requester_lng = #{requesterLng,jdbcType=DECIMAL},
+      requester_lat = #{requesterLat,jdbcType=DECIMAL},
+      helper_lng = #{helperLng,jdbcType=DECIMAL},
+      helper_lat = #{helperLat,jdbcType=DECIMAL},
+      status = #{status,jdbcType=INTEGER},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      updated_at = #{updatedAt,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

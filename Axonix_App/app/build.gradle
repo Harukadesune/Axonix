@@ -1,0 +1,100 @@
+apply plugin: 'com.huawei.agconnect'
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+
+android.applicationVariants.all { variant ->
+    variant.outputs.all {
+        def taskName = "print${variant.name.capitalize()}SHA1"
+        tasks.create(name: taskName) {
+            doLast {
+                def keystore = file("${System.getProperty("user.home")}/.android/debug.keystore")
+                def alias = "androiddebugkey"
+                def storepass = "android"
+                def keypass = "android"
+                def command = "keytool -list -v -keystore ${keystore} -alias ${alias} -storepass ${storepass} -keypass ${keypass}"
+                println "Running command: $command"
+                def process = command.execute()
+                println process.text
+            }
+        }
+    }
+}
+
+android {
+    namespace 'com.Axonix'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.Axonix"
+        minSdk 29
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        manifestPlaceholders += [
+                hw_app_id: "113945503" // 与AndroidManifest中的appid保持一致
+        ]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments.put("AROUTER_MODULE_NAME", project.name)
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 完全不需要签名配置，系统自动处理
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        buildConfig = true // 确保启用 BuildConfig
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.transportation.consumer
+    implementation libs.core.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.camera.view
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation libs.arouter.api // 引入 ARouter 核心库
+    annotationProcessor libs.arouter.compiler // 引入 ARouter 编译器（注解）
+    implementation project(':common:Index')
+    implementation project(':module_emergency:emergencyMain')
+    implementation project(':module_nav:navMain')
+    implementation project(':module_social:socialMain')
+    implementation project(':module_user:userMain')
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.huawei.hms:hwid:6.11.0.300'
+    implementation 'com.huawei.hms:hmscoreinstaller:6.11.0.301'
+    implementation 'com.huawei.agconnect:agconnect-core:1.9.1.300'
+    implementation 'com.huawei.hms:push:6.12.0.300'
+    implementation 'com.amap.api:location:6.1.0'
+    implementation "androidx.camera:camera-camera2:1.2.3"
+    implementation "androidx.camera:camera-lifecycle:1.2.3"
+
+}

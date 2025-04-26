@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <!-- 原本的内容作为子 LinearLayout 放在 FrameLayout 里 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 原有内容照旧 -->
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="欢迎使用Axonix"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_color"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/assist_button_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:singleSelection="false"
+            app:selectionRequired="false">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ai"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="AI助理"
+                android:textAllCaps="false"
+                android:textSize="12dp"
+                app:cornerRadius="16dp"
+                android:checkable="false"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_traffic"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="路况识别"
+                android:textAllCaps="false"
+                android:textSize="12dp"
+                app:cornerRadius="16dp"
+                android:checkable="false"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_communicate"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="翻译助手"
+                android:textAllCaps="false"
+                android:textSize="12dp"
+                app:cornerRadius="16dp"
+                android:checkable="false"
+                android:layout_marginStart="4dp" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- 悬浮按钮保持不变，但现在它的 parent 是 FrameLayout，就能生效了 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/ic_add_post" />
+</FrameLayout>

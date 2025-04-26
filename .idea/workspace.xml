@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e6372b5e-772b-4829-aa1c-324e9448ec14" name="更改" comment="更改">
+      <change beforePath="$PROJECT_DIR$/.idea/Axonix.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Axonix.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_App/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_App/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_App/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_App/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_App/common/Index/src/main/java/com/Axonix/index/controller/UserUpdateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_App/common/Index/src/main/java/com/Axonix/index/controller/UserUpdateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_App/common/Index/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_App/common/Index/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_Manager/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_Manager/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_Manager/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_Manager/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_Manager/src/main/java/com/Axonix/config/HttpConnectorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_Manager/src/main/java/com/Axonix/config/HttpConnectorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_Manager/src/main/java/com/Axonix/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_Manager/src/main/java/com/Axonix/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_Manager/src/main/java/com/Axonix/service/HuaweiPushService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_Manager/src/main/java/com/Axonix/service/HuaweiPushService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_Manager/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_Manager/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Axonix_Manager/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Axonix_Manager/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foies_vue/node_modules/clone/clone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Foies_vue/node_modules/clone/clone.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foies_vue/node_modules/defaults/node_modules/clone/clone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Foies_vue/node_modules/defaults/node_modules/clone/clone.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foies_vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Foies_vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foies_vue/src/api/helpinfo_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Foies_vue/src/api/helpinfo_api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foies_vue/src/api/user_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Foies_vue/src/api/user_api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foies_vue/src/api/uservip_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Foies_vue/src/api/uservip_api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axonix.sql" beforeDir="false" afterPath="$PROJECT_DIR$/axonix.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detective/Detective_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/detective/Detective_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detective/Readme" beforeDir="false" afterPath="$PROJECT_DIR$/detective/Readme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transfer/Speech_Recognition_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/transfer/Speech_Recognition_api.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2w4k6EsqduKKLZReU2efNCJjXzI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.speech_recognition_api">
+    <configuration name="Detective_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Axonix" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/detective" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detective/Detective_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="speech_recognition_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Axonix" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/transfer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/transfer/speech_recognition_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.speech_recognition_api" />
+        <item itemvalue="Python.Detective_api" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="e6372b5e-772b-4829-aa1c-324e9448ec14" name="更改" comment="" />
+      <created>1745308056094</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745308056094</updated>
+      <workItem from="1745308057131" duration="20000" />
+      <workItem from="1745308079118" duration="173000" />
+      <workItem from="1745308253643" duration="521000" />
+      <workItem from="1745308779644" duration="15000" />
+      <workItem from="1745308797153" duration="103000" />
+      <workItem from="1745308933715" duration="55000" />
+      <workItem from="1745309071550" duration="8000" />
+      <workItem from="1745309151873" duration="11000" />
+      <workItem from="1745651585601" duration="680000" />
+      <workItem from="1745652269865" duration="43000" />
+      <workItem from="1745652819796" duration="221000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Axonix$Detective_api.coverage" NAME="Detective_api 覆盖结果" MODIFIED="1745651927376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detective" />
+    <SUITE FILE_PATH="coverage/Axonix$speech_recognition_api.coverage" NAME="speech_recognition_api 覆盖结果" MODIFIED="1745652290878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/transfer" />
+  </component>
+</project>

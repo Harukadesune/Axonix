@@ -1,0 +1,15 @@
+测试是否支持
+import torch
+print(torch.cuda.is_available())  # 如果返回 True，则表示支持 GPU
+
+如果返回 False，你需要安装支持 GPU 的 PyTorch 版本。可以通过以下命令安装：
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+其中 cu121 表示 CUDA 12.1 版本，你可以根据你的 CUDA 版本选择合适的安装命令。
+
+MACos的设置：
+# 模型路径（根据实际的存储地址修改）
+base_model_path = r"./model"  ⚠️此处需要自己下载vosk模型然后替换该路径
+vosk_model_path = os.path.join(base_model_path, "vosk-model-cn-kaldi-multicn-0.15")
+

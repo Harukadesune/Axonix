@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "name": "huawei.push",
+      "type": "com.Axonix.config.HuaweiPushProperties",
+      "sourceType": "com.Axonix.config.HuaweiPushProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "huawei.push.app-id",
+      "type": "java.lang.String",
+      "sourceType": "com.Axonix.config.HuaweiPushProperties"
+    },
+    {
+      "name": "huawei.push.client-id",
+      "type": "java.lang.String",
+      "sourceType": "com.Axonix.config.HuaweiPushProperties"
+    },
+    {
+      "name": "huawei.push.client-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.Axonix.config.HuaweiPushProperties"
+    },
+    {
+      "name": "huawei.push.oauth-url",
+      "type": "java.lang.String",
+      "sourceType": "com.Axonix.config.HuaweiPushProperties"
+    },
+    {
+      "name": "huawei.push.push-url",
+      "type": "java.lang.String",
+      "sourceType": "com.Axonix.config.HuaweiPushProperties"
+    }
+  ],
+  "hints": []
+}

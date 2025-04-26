@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary_blue">#2196F3</color>
+    <color name="text_secondary">#60000000</color>
+    <color name="backgroundColor">#FEF7FF</color>
+
+    <color name="background">#FAFAFA</color>
+    <color name="toolbar_background">#FFFFFF</color>
+    <color name="primary_text">#212121</color>
+
+    <color name="colorPrimary">#9B47C7</color>
+    <color name="colorPrimaryVariant">#7A2FA7</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="ripple_color">#B3B3B3</color>    <!-- 按钮点击时的波纹颜色 -->
+    <color name="stroke_color">#3700B3</color>
+    <color name="primary_color">#2196F3</color>
+</resources>
