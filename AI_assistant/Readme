@@ -4,3 +4,6 @@
 # 生成密钥和证书（有效期365天）
 openssl req -x509 -newkey rsa:4096 -nodes -out ssl.cert -keyout ssl.key -days 365
 将生成的 ssl.cert 和 ssl.key 文件放在项目目录下。
+
+api_key
+如需要使用ai助理功能，需要自行前往deepseekAPI开放平台，按照需求申请apieky。
